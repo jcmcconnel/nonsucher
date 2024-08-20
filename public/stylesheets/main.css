@@ -1,0 +1,136 @@
+body {
+   background-color: lightblue;
+}
+header {
+}
+header > h1 {
+   position: relative;
+   left: 2%;
+   margin: 0.25em;
+   float: left;
+   color: white;
+   z-index: 1;
+}
+header > h1 > a {
+   text-decoration: none;
+   color: white;
+}
+
+/* Site Navigation */
+nav#site {
+   position: relative;
+   background-color: darkblue;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   padding: 0.5px;
+}
+nav#site > ul {
+   display: flex;
+   padding: 0;
+   margin: 0;
+   margin-right: 5em;
+   font-size: larger;
+   justify-content: right;
+}
+nav#site ul li {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+}
+
+.dropdown:hover .dropdown-content, .dropdown-content:hover {
+   display: block;
+}
+
+.dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: darkblue;
+   top: 50px;
+   z-index: 1;
+   padding: 0px;
+   box-shadow: 4px 4px 16px #008080;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+
+nav#site ul li a {
+   padding: 0.875em 0.625em;
+   margin: 0;
+   text-decoration: none;
+   display: block;
+   color: white;
+   position: relative;
+}
+
+div#body-section {
+   font-size: 16px; /* Reference value for em measures*/
+   height: 100%;
+   max-height: 100%;
+}
+
+/*Posts navigation settings */
+nav#posts {
+   position: absolute;
+   overflow: auto;
+   left: 0.5em;
+   width: 12em;
+   top: 4.05em;
+   bottom: 2em;
+   background-color: steelblue;
+   border-bottom-left-radius: 10px;
+   text-align: center;
+   padding: 0;
+   margin: 0;
+}
+nav#posts ul {
+   padding: 0;
+   margin: 0;
+}
+nav#posts ul li#selected {
+   background-color: #008080;
+   border-radius: 10px;
+}
+nav#posts ul li a {
+   display: block;
+   padding: 0.875em 0.625em;
+   margin: 0;
+   overflow: hidden;
+   text-decoration: none;
+   color: white;
+}
+main {
+   position: absolute;
+   left: 12.5em;
+   right: 0.5em;
+   top: 4.05em;
+   bottom: 2em;
+   float: right;
+}
+div#file {
+   background-color: #EEEEEE;
+   overflow: auto;
+   padding-left: 20px;
+   padding-bottom: 0;
+   height: 100%;
+   max-height: 100%;
+   border-bottom-right-radius: 10px;
+}
+div#file a {
+   text-decoration: none;
+}
+
+footer {
+   position: absolute;
+   bottom: 0em;
+   height: 1.5em;
+}
+footer > p {
+   position: static;
+   text-align: center;
+   margin: auto;
+}
+
+
+
+

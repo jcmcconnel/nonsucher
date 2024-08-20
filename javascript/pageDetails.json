@@ -1,0 +1,14 @@
+
+{
+   "index": {
+      "fsPath": "/",
+      "path": "/",
+      "title": "James McConnel"
+   },
+   "blog": {
+      "fsPath": "/projects/blog",
+      "path": "/projects/blog",
+      "title": "James McConnel",
+      "subtitle": "Blog"
+   }
+}

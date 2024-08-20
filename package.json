@@ -1,0 +1,21 @@
+{
+  "name": "homestead",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node app.js localhost:8000",
+    "test": "test"
+  },
+  "author": "James McConnel",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "markdown-it": "^14.1.0"
+  }
+}

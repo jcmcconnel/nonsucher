@@ -1,0 +1,7 @@
+<h1>
+  <a href="/"><%= title %></a>
+<% if(typeof(subtitle) != 'undefined' && subtitle) { %>
+   <%- ' | <a href=".">' + subtitle + '</a>' -%>
+<% } %>
+</h1>
+<%- include('site-nav') -%>

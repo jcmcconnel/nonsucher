@@ -1,0 +1,42 @@
+<% var siteNavLinks = 
+  [
+    { name: "Home", path: "/" }, 
+    { name: "Projects", path: "", "children": [
+      { name: "Blog",             path: "/projects/blog" },
+      { name: "Website",          path: "/projects/website" },
+      { name: "RecipeJar",        path: "/projects/recipejar" },
+      { name: "Moon Dog Academy", path: "/projects/moondog" },
+      { name: "Math Reference",   path: "/projects/math-ref" },
+      { name: "Greek",            path: "/projects/greek" },
+      { name: "Investing",        path: "/projects/investing" }
+    ]}
+  ];
+ 
+function makeLink(link, depth) { 
+  if(link.path != null) { 
+    return depth+'<li><a href="'+link.path+'">'+link.name+'</a></li>\n';
+  } else return link.name;
+}
+
+function makeListOfLinks(list, depth) {
+    var output = "";
+    for (var i = 0; i < list.length; i++){
+        if(list[i].children) {
+            output = output +depth+'  <li class="dropdown">'+
+            '<a>'+list[i].name+'</a>'+
+            '\n'+depth+'  <ul class="dropdown-content">\n'+
+            makeListOfLinks(list[i].children, depth+"  ")+
+            '  </ul></li>\n</li>';
+        } else {
+            output = output + makeLink(list[i], depth+"  ")
+        }
+    }
+    return output;
+}
+%>
+
+<nav id='site'>
+   <ul>
+   <%- makeListOfLinks(siteNavLinks, "") %>
+   </ul>
+</nav>
